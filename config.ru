@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-run proc {
-  [
-    200, { 'Content-Type' => 'text/html' },
+require './config/application'
 
-    ['Hello, world!'],
-  ]
-}
+run TestApp::Application.new
